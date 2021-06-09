@@ -1,0 +1,92 @@
+https://www.youtube.com/watch?v=OuOb1_qADBQ&ab_channel=BoniekyLacerdaBoniekyLacerda
+
+Alterando nome do usuário do git:
+git config --global user.name "Vitor Balconi"
+
+Definindo e-mail
+config --global user.email "vitorbalconi@yahoo.com.br"
+
+Definindo editor do GIT
+git config --global core.editor 'code --wait
+
+Consultar nome cadastrado
+git config user.name
+
+Consultar e-mail cadastrado
+git config user.email
+
+Ver todas configuraçoes
+git config --list
+
+
+-------------------------------------------------
+Comandos básicos do terminal:
+
+cd -> seleciona a pasta
+cd desktop -> acessa desktop
+cd.. -> volta um diretório
+dir ou tree /f -> lista de arquivos da pasta selecionada
+
+git init -> inicializa o repositório GIT na pasta selecionada (cria uma pasta .git)
+
+branch master -> versão principal do sistema
+commit -> trabalhou no sistema e vai enviar os arquivos para o GIT
+
+arquivo README.md -> instruçoes do projeto
+
+git status -> verifica arquivos e alteraçao nos arquivos
+
+git add -A -> adiciona os arquivos que foram alterados
+
+git commit -m "mensagem de alteraçao" -> da o commit da alteração e inclue os arquivos alerados
+
+git log -> mostra todos os commit
+
+git branch -> mostra todos os branchs do git, e o * mostra qual que está selecionado
+
+git commit -am -> já adiciona os arquivos junto com o commit
+
+git reset --soft id -> volta para o commit desejado, mas deixando as novas alterações esperando receber um novo commit
+git reset --mixed id -> volta para o commit, mas não deixa as novas alterações pre-preparadas. É necessário dar add novamente
+git reset --hard id -> volta todos os arquivos para o commit desejado, deixando de existir os commits posteriores a ele.
+
+git branch nome_branch -> cria um novo branch baseado no branch selecionado
+
+git checkout nome_branch -> troca de branch
+
+git diff -> mostra quais são as alterações que foram realizadas
+git diff --name-only -> mostra somente o nome dos arquivos modificados
+git diff nome_arquivo -> mostra somente alterações do arquivo desejado
+git checkout HEAD -- nome_arquivo -> deixa de considerar as modificações realizadas
+
+Gerar chave SSH
+https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+GitHub -> Settings -> SSH and GRG keys -> New SSH keys
+
+git remote add origin URL -> Adiciona um repositório remoto (origin é repositório)
+git remote -v -> mais detalhes (fetch e push) do repositório remoto
+git push -u origin master -> envia os arquivos e commits para o repositório remoto (origin = repositório; master = brench)
+
+git push origin master-> envia o commit para o repositório remoto vinculado
+
+criar arquivo .gitignore -> escreva o diretorio/nome dos arquivos que devem ser ignorados pelo git. Exemplos:
+*.sql
+*.txt
+pasta/
+
+git revert --no-edit id_commit-> faz um commit novo, mas voltando para o commit desejado, sem perder o código desenvolvido
+
+git push origin :nome_branch -> exclui a branch remoto do repositório origin
+
+git branch -D nome_branch -> excluir a branch localmente
+
+git pull origin master -> puxa os arquivos da branch junto com históricos de commit
+
+git clone URL -> clona o projeto na pasta selecionada localmente
+
+fork -> pega um projeto existente
+
+new pull request -> envia as alteraçoes para o projeto original
+
+
+
